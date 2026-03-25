@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/logo.svg" type="image/svg" />
+    <title>SmartFactoryLab - Kyung Hee University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="nav-logo">
+        <img
+          src="../assets/logo+name.png"
+          alt="SmartFactoryLab Logo"
+          class="logo-img"
+          style="height: 40px; width: auto; display: block; object-fit: contain"
+        />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#research">Research Area</a></li>
+        <li><a href="./../members/index.html">Members</a></li>
+        <li><a href="#">Publications</a></li>
+        <li><a href="../index.html#join">Join Us</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div
+        class="container"
+        style="max-width: 1140px; margin: 0 auto; padding: 0 2rem"
+      >
+        <div class="breadcrumb">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <span>Publications</span>
+        </div>
+        <h1>Publications</h1>
+        <p>Conference papers, journal articles and patent contributions</p>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main-layout">
+      <!-- CONTENT -->
+      <main class="content">
+        <!-- Tabs -->
+        <div class="pub-type-tabs">
+          <button class="pub-tab active" data-tab="conference">
+            Conference
+          </button>
+          <button class="pub-tab" data-tab="journal">Journal</button>
+          <button class="pub-tab" data-tab="patent">Patent</button>
+        </div>
+
+        <!-- ===== CONFERENCE ===== -->
+        <div id="tab-conference">
+          <div class="pub-entry">
+            <div>
+              <h3>
+                Deploying data analytics models in asset administration shells:
+                Energy prediction in manufacturing/Engineering Applications of
+                Artificial Intelligence
+              </h3>
+              <p class="authors">
+                <strong>Seung-Jun Shin</strong> and
+                <strong> Jumyung Um</strong>
+              </p>
+              <p class="venue-full">
+                Engineering Applications of Artificial Intelligence, 2024
+              </p>
+            </div>
+
+            <div class="pub-entry">
+              <div>
+                <h3>
+                  Low-cost mobile augmented reality service for building
+                  information modeling/Automation in Construction
+                </h3>
+                <p class="authors">
+                  <strong>Jumyung Um</strong>,
+                  <strong>Joung min Park </strong>
+                  <strong>Seo yeon Park</strong> and
+                  <strong> Gokcen Yilmaz</strong>
+                </p>
+                <p class="venue-full">Automation in Construction, 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /tab-conference -->
+
+        <!-- ===== JOURNAL ===== -->
+        <div id="tab-journal" style="display: none">
+          <div class="pub-entry">
+            <div>
+              <h3>
+                Digital twin for autonomous collaborative robot by using
+                synthetic data and reinforcement learning/Robotics and Computer
+                Integrated Manufacturing
+              </h3>
+              <p class="authors">
+                <strong>Dongjun Kim</strong>, <strong>Minho Choi</strong>, and
+                <strong> Jumyung Um</strong>
+              </p>
+              <p class="venue-full">
+                IEEE Robotics and Automation Letters, 2024 (JCR Q1)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- /tab-journal -->
+
+        <!-- ===== PATENT ===== -->
+        <div id="tab-patent" style="display: none">
+          <div class="pub-entry">
+            <div>
+              <h3>
+                TRAINING SYSTEMS AND METHODS FOR PREDICTING KNEE ADDUCTION
+                MOMENT OUR DOCKET: 1475-74 PCT US
+              </h3>
+              <p class="venue-full">2024</p>
+            </div>
+          </div>
+        </div>
+        <!-- /tab-patent -->
+      </main>
+    </div>
+
+    <footer>
+      © 2026 SmartFactoryLab · Kyunghee University · All rights reserved.
+    </footer>
+
+    <script>
+      // Hamburger
+      document.getElementById("hamburger").addEventListener("click", () => {
+        document.getElementById("navLinks").classList.toggle("open");
+      });
+
+      // Tab switching
+      const tabs = document.querySelectorAll(".pub-tab");
+      const tabContents = {
+        conference: document.getElementById("tab-conference"),
+        journal: document.getElementById("tab-journal"),
+        patent: document.getElementById("tab-patent"),
+      };
+      const sidebarLinks = document.querySelectorAll(".sidebar-menu a");
+
+      function switchTab(tabName) {
+        tabs.forEach((t) =>
+          t.classList.toggle("active", t.dataset.tab === tabName),
+        );
+        sidebarLinks.forEach((l) =>
+          l.classList.toggle("active", l.dataset.tab === tabName),
+        );
+        Object.entries(tabContents).forEach(
+          ([k, el]) => (el.style.display = k === tabName ? "" : "none"),
+        );
+        // reset year filter
+        document
+          .querySelectorAll(".sidebar-years button")
+          .forEach((b) =>
+            b.classList.toggle("active", b.dataset.year === "all"),
+          );
+        document
+          .querySelectorAll("#tab-" + tabName + " .year-group")
+          .forEach((g) => g.removeAttribute("data-hidden"));
+      }
+
+      tabs.forEach((t) =>
+        t.addEventListener("click", () => switchTab(t.dataset.tab)),
+      );
+      sidebarLinks.forEach((l) =>
+        l.addEventListener("click", (e) => {
+          e.preventDefault();
+          switchTab(l.dataset.tab);
+        }),
+      );
+
+      // Year filter
+      document.querySelectorAll(".sidebar-years button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".sidebar-years button")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const year = btn.dataset.year;
+          // filter in currently visible tab
+          const activeTab =
+            document.querySelector(".pub-tab.active").dataset.tab;
+          document
+            .querySelectorAll("#tab-" + activeTab + " .year-group")
+            .forEach((g) => {
+              if (year === "all" || g.dataset.year === year) {
+                g.removeAttribute("data-hidden");
+              } else {
+                g.setAttribute("data-hidden", "true");
+              }
+            });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/logo.svg" type="image/svg" />
+    <title>SmartFactoryLab - Kyung Hee University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="nav-logo">
+        <img
+          src="assets/logo+name.png"
+          alt="SmartFactoryLab Logo"
+          class="logo-img"
+          style="height: 40px; width: auto; display: block; object-fit: contain"
+        />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#research">Research Area</a></li>
+        <li><a href="./members/index.html">Members</a></li>
+        <li><a href="./publications/index.html">Publications</a></li>
+        <li><a href="#join">Join Us</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-dots" id="heroDots"></div>
+      <div class="hero-content">
+        <div class="hero-tag"><span>🎓</span> Kyung Hee University</div>
+        <h1
+          class="logo-text"
+          style="
+            font-family:
+              &quot;Pretendard&quot;, &quot;Nanum Gothic&quot;, sans-serif;
+          "
+        >
+          SmartFactoryLab
+        </h1>
+        <p>
+          Advancing the frontiers of Smart Manufacturing and Artificial
+          Intelligence
+        </p>
+        <a href="#research" class="hero-cta">
+          Explore Our Research
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="research" id="research">
+      <div class="container">
+        <p class="section-label reveal">Research Areas</p>
+        <h2 class="section-title reveal">Our Core Research</h2>
+        <p class="section-sub reveal">
+          We lead the future of autonomous industry by integrating Digital
+          Twins, Generative AI, and Intelligent Robotics to create seamless
+          Cyber-Physical Systems.
+        </p>
+
+        <div class="research-categories">
+          <!-- 1 -->
+          <div class="research-category reveal">
+            <div class="cat-header">
+              <div class="cat-icon blue">🔧</div>
+              <h3>Smart Manufacturing</h3>
+            </div>
+            <div class="cat-projects">
+              <div class="cat-project">
+                <h4>Data-Driven Digital Twins</h4>
+                <p>
+                  Bridging the Sim-to-Real gap for complex assemblies using
+                  synthetic data and advanced reinforcement learning.
+                </p>
+              </div>
+              <div class="cat-project">
+                <h4>Machine Tending & Collaborative Robots</h4>
+                <p>Reconfigurable machine tending systems.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="research-category reveal" style="transition-delay: 0.1s">
+            <div class="cat-header">
+              <div class="cat-icon green">🧠</div>
+              <h3>Cognitive Industrial AI</h3>
+            </div>
+            <div class="cat-projects">
+              <div class="cat-project">
+                <h4>Generative AI & LLMs</h4>
+                <p>
+                  Enhancing human-robot collaboration through Large Language
+                  Models (LLMs) and multimodal digital assistants.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="research-category reveal" style="transition-delay: 0.2s">
+            <div class="cat-header">
+              <div class="cat-icon purple">🦾</div>
+              <h3>Robotics</h3>
+            </div>
+            <div class="cat-projects">
+              <div class="cat-project">
+                <h4>Embedded AI Sensors</h4>
+                <p>
+                  Implementing "Perception at the Edge" with low-cost,
+                  high-efficiency AI sensors for real-time robotic gripping.
+                </p>
+              </div>
+              <div class="cat-project">
+                <h4>Reinforcement Learning</h4>
+                <p>Reconfigurable machine tending systems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="publications" id="publications">
+      <div class="container">
+        <p class="section-label reveal">Research Output</p>
+
+        <h2 class="section-title reveal">Publication</h2>
+        <div id="journal-list" class="pub-list"></div>
+
+        <div style="text-align: center; margin-top: 2rem">
+          <a href="./publications/index.html" class="view-all reveal"
+            >More Publications →</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- <section class="publications" id="publications">
+      <div class="container">
+        <p class="section-label reveal">Research Output</p>
+        
+        <h2 class="section-title reveal">Journal Publication</h2>
+
+        <div class="pub-list">
+          <div class="pub-card reveal">
+            <div>
+              <p class="pub-venue">
+                Journal of Computational Design and Engineering 13
+              </p>
+              <p class="pub-title">
+                Generative 3D appearance design: A survey of generation,
+                segmentation and editing by artificial intelligence
+              </p>
+              <p class="pub-authors">
+                <strong>J Park</strong>, <strong>SA Murdivien</strong>,
+                <strong>K Choi</strong>, <strong>D Mun</strong> and
+                <strong>J Um</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+        <h2 class="section-title reveal" style="padding-top: 40px">
+          Conference Proceedings
+        </h2>
+
+        <div class="pub-list">
+          <div class="pub-card reveal">
+            <div>
+              <p class="pub-venue">
+                IET Conference Proceedings CP942 2025 (28), 1-7
+              </p>
+              <p class="pub-title">
+                Low-cost vision system for chip detection using machine tending
+                robot cameras
+              </p>
+              <p class="pub-authors">
+                <strong>SA Murdivien</strong>, <strong>M Kim</strong>,
+                <strong>YJ Yun</strong> and
+                <strong>J Um</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+        <h2 class="section-title reveal" style="padding-top: 40px">Patent</h2>
+
+        <div class="pub-list">
+          <div class="pub-card reveal">
+            <div>
+              <p class="pub-venue">00-0000-000000</p>
+              <p class="pub-title">
+                Low-cost vision system for chip detection using machine tending
+                robot cameras
+              </p>
+              <p class="pub-authors">
+                <strong>SA Murdivien</strong>, <strong>M Kim</strong>,
+                <strong>YJ Yun</strong> and
+                <strong>J Um</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem">
+          <a href="#" class="view-all reveal">More Publications →</a>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- JOIN & CONTACT -->
+    <section class="join" id="join">
+      <div class="container">
+        <div class="join-inner">
+          <div>
+            <p class="section-label" style="color: var(--accent-light)">
+              Opportunities
+            </p>
+            <h2>Join Our Lab</h2>
+            <p>
+              We are always looking for passionate researchers and students to
+              join our team. If you are interested in Smart Manufacturing,
+              Industrial AI, or Autonomous Robotics, we would love to hear from
+              you.
+            </p>
+          </div>
+          <div class="contact-card" id="contact">
+            <h3>Contact Us</h3>
+
+            <div class="contact-row" style="margin-bottom: 0px">
+              <div class="contact-icon">📍</div>
+              <div class="contact-info">
+                <label>Location</label>
+                <p>
+                  Kyung Hee University, 1732 Deogyeong-daero<br />Yongin-si,
+                  17104, Republic of Korea
+                </p>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="map-placeholder reveal">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.9644670001095!2d127.0772275763574!3d37.24263624231644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b44df25a102c3%3A0x22dcda61fb710fef!2z6rK97Z2s64yA7ZstandardIOqzteqzvOuMgO2Vmeq0gA!5e0!3m2!1sko!2skr!4v1709280000000!5m2!1sko!2skr"
+                  allowfullscreen=""
+                  loading="lazy"
+                  title="Kyung Hee University Map"
+                >
+                </iframe>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon">✉️</div>
+              <div class="contact-info">
+                <label>Email</label>
+                <p>jayum@khu.ac.kr</p>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-icon">📞</div>
+              <div class="contact-info">
+                <label>Telephone</label>
+                <p>031-201-5443</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      © 2026 SmartFactoryLab · Kyung Hee University · All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
