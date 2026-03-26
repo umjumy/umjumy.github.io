@@ -176,7 +176,7 @@
 
       /* ── LAYOUT ── */
       .main-layout {
-        display: grid;
+        /* display: grid; */
         grid-template-columns: 220px 1fr;
         max-width: 1140px;
         margin: 0 auto;
@@ -342,7 +342,7 @@
       .pub-entry {
         padding: 1.5rem 0;
         border-bottom: 1px solid var(--divider);
-        display: grid;
+        /* display: grid; */
         grid-template-columns: 1fr auto;
         gap: 1.5rem;
         align-items: start;
@@ -404,6 +404,7 @@
       .pub-entry .venue-full {
         font-size: 0.78rem;
         color: var(--gray-400);
+        margin-bottom: 4.8px;
         font-style: italic;
       }
 

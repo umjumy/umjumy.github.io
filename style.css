@@ -362,7 +362,7 @@
 
       .research-categories {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
         margin-top: 3rem;
       }
@@ -408,6 +408,9 @@
       .cat-icon.purple {
         background: rgba(139, 92, 246, 0.1);
       }
+      .cat-icon.pink {
+        background: rgba(235, 91, 204, 0.1);
+      }
 
       .cat-header h3 {
         font-size: 0.95rem;
@@ -434,7 +437,7 @@
       .cat-project h4 {
         font-size: 0.82rem;
         font-weight: 600;
-        color: var(--gray-800);
+        /* color: var(--gray-800); */
         margin-bottom: 0.25rem;
         transition: color 0.2s;
       }
@@ -445,7 +448,7 @@
 
       .cat-project p {
         font-size: 0.78rem;
-        color: var(--gray-400);
+        /* color: var(--gray-400); */
         line-height: 1.5;
         font-weight: 300;
       }
