@@ -307,7 +307,7 @@
 
       /* ── MEMBER GRID ── */
       .member-grid {
-        display: grid;
+        /* display: grid; */
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 1.5rem;
       }
@@ -320,6 +320,7 @@
         transition:
           box-shadow 0.3s,
           transform 0.3s;
+        margin: 10px;
       }
 
       .member-card:hover {
@@ -503,7 +504,7 @@
       }
 
       .alumni-period {
-        font-family: "JetBrains Mono", monospace;
+        /* font-family: "JetBrains Mono", monospace; */
         font-size: 0.68rem;
         color: var(--gray-400);
       }

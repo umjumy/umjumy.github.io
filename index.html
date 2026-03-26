@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../assets/logo.svg" type="image/svg" />
+    <link rel="icon" href="assets/logo.svg" type="image/svg" />
     <title>SmartFactoryLab - Kyung Hee University</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
@@ -12,309 +12,229 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <!-- NAV -->
     <nav>
-      <a href="../index.html" class="nav-logo">
+      <a href="#" class="nav-logo">
         <img
-          src="../assets/logo+name.png"
+          src="assets/logo+name.png"
           alt="SmartFactoryLab Logo"
           class="logo-img"
           style="height: 40px; width: auto; display: block; object-fit: contain"
         />
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../index.html#research">Research Area</a></li>
-        <li><a href="#">Members</a></li>
-        <li><a href="./../publications/index.html">Publications</a></li>
-        <li><a href="../index.html#join">Join Us</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#research">Research Area</a></li>
+        <li><a href="./members/index.html">Members</a></li>
+        <li><a href="./publications/index.html">Publications</a></li>
+        <li><a href="#join">Join Us</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </nav>
 
-    <!-- PAGE HEADER -->
-    <div class="page-header">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-dots" id="heroDots"></div>
+      <div class="hero-content">
+        <div class="hero-tag"><span>🎓</span> Kyung Hee University</div>
+        <h1
+          class="logo-text"
+          style="
+            font-family:
+              &quot;Pretendard&quot;, &quot;Nanum Gothic&quot;, sans-serif;
+          "
+        >
+          SmartFactoryLab
+        </h1>
+        <p>
+          Advancing the frontiers of Smart Manufacturing and Artificial
+          Intelligence
+        </p>
+        <a href="#research" class="hero-cta">
+          Explore Our Research
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="research" id="research">
       <div class="container">
-        <div class="breadcrumb">
-          <a href="../index.html">Home</a>
-          <span>/</span>
-          <span>Members</span>
+        <p class="section-label reveal">Research Areas</p>
+        <h2 class="section-title reveal">Our Research</h2>
+        <p class="section-sub reveal">
+          We lead the future of autonomous industry by integrating Digital
+          Twins, Generative AI, and Intelligent Robotics to create seamless
+          Cyber-Physical Systems.
+        </p>
+
+        <div class="research-categories">
+          <!-- 1 -->
+          <div class="research-category reveal" style="transition-delay: 0.1s">
+            <div class="cat-header">
+              <div class="cat-icon green">🧠</div>
+              <h3>Generative AI</h3>
+            </div>
+            <div class="cat-projects">
+              <div class="cat-project">
+                <!-- <h4>Generative AI & LLMs</h4> -->
+                <p>
+                  Advancing human-robot collaboration by integrating Large
+                  Language Models (LLMs) and Vision-Language-Action (VLA) models
+                  to create next-generation digital assistants capable of
+                  understanding complex industrial instructions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="research-category reveal" style="transition-delay: 0.2s">
+            <div class="cat-header">
+              <div class="cat-icon purple">🦾</div>
+              <h3>Robotics</h3>
+            </div>
+            <div class="cat-projects">
+              <div class="cat-project">
+                <!-- <h4>Embedded AI Sensors</h4> -->
+                <p>
+                  Developing high-efficiency AI sensing and real-time point
+                  cloud analysis to enhance robotic gripping capabilities,
+                  implementing "Perception at the Edge" for autonomous
+                  decision-making in dynamic environments.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="research-category reveal">
+            <div class="cat-header">
+              <div class="cat-icon blue">🌐</div>
+              <h3>International Standard</h3>
+            </div>
+            <div class="cat-projects">
+              <div class="cat-project">
+                <!-- <h4>Data-Driven Digital Twins</h4> -->
+                <p>
+                  Bridging the gap between virtual and physical environments
+                  using NVIDIA Isaac Sim and synthetic data, while implementing
+                  Asset Administration Shell (AAS) to build reconfigurable smart
+                  manufacturing systems.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="research-category reveal">
+            <div class="cat-header">
+              <div class="cat-icon pink">👥</div>
+              <h3>Human Supporting System</h3>
+            </div>
+            <div class="cat-projects">
+              <div class="cat-project">
+                <!-- <h4>Data-Driven Digital Twins</h4> -->
+                <p>
+                  Designing intelligent environments where humans and robots
+                  coexist safely, utilizing reinforcement learning-based
+                  adaptive control and wearable monitoring to define dynamic
+                  safety zones and worker support systems.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <h1>Lab Members</h1>
-        <p>Meet the researchers and students of the SmartFactoryLab</p>
       </div>
-    </div>
+    </section>
 
-    <!-- STICKY NAV -->
-    <div class="member-nav">
-      <div class="member-nav-inner">
-        <a href="#professor" class="member-nav-link active">Professor</a>
-        <a href="#phd" class="member-nav-link">PhD Students</a>
-        <a href="#ms" class="member-nav-link">MS Students</a>
-        <a href="#alumni" class="member-nav-link">Alumni</a>
-      </div>
-    </div>
-
-    <!-- PROFESSOR -->
-    <section class="member-section" id="professor-section">
+    <!-- JOIN & CONTACT -->
+    <section class="join" id="join">
       <div class="container">
-        <span class="section-anchor" id="professor"></span>
-        <div class="section-heading"><h2>Professor</h2></div>
-
-        <div class="prof-card">
-          <div class="prof-photo-placeholder">👤</div>
-          <div class="prof-info">
-            <h2 class="prof-name">
-              Jumyung Um
-              <span
-                style="
-                  font-size: 0.85rem;
-                  color: var(--gray-400);
-                  font-family: &quot;Sora&quot;, sans-serif;
-                  font-weight: 400;
-                "
-                >(엄주명)</span
-              >
-            </h2>
-            <p class="prof-title">
-              Associate professor <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;in Industrial and Management System
-              Engineering <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;in Graduate School of Artificial
-              Intelligence <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;in Graduate School of Metaverse <br />
-              Kyung Hee University<br />
+        <div class="join-inner">
+          <div>
+            <p class="section-label" style="color: var(--accent-light)">
+              Opportunities
+            </p>
+            <h2>Join Our Lab</h2>
+            <p>
+              We are always looking for passionate researchers and students to
+              join our team. If you are interested in Smart Manufacturing,
+              Industrial AI, or Autonomous Robotics, we would love to hear from
+              you.
             </p>
           </div>
-        </div>
-      </div>
-    </section>
+          <div class="contact-card" id="contact">
+            <h3>Contact Us</h3>
 
-    <!-- PhD -->
-    <section class="member-section" style="padding-top: 1rem" id="phd-section">
-      <div class="container">
-        <span class="section-anchor" id="phd"></span>
-        <div class="section-heading"><h2>PhD Students</h2></div>
-        <div class="member-grid">
-          <div class="member-card">
-            <!-- <div class="member-photo-placeholder">👤</div> -->
-            <div class="member-info">
-              <span class="member-badge badge-phd">PhD 4기</span>
-              <p class="member-name">👑 Jongsu Park</p>
-              <p class="member-name-ko">박종수</p>
-              <p class="member-research">whdtn95@khu.ac.kr</p>
+            <div class="contact-row" style="margin-bottom: 0px">
+              <div class="contact-icon">📍</div>
+              <div class="contact-info">
+                <label>Location</label>
+                <p>
+                  Room 524, Engineering Building, Kyung Hee University, 1732
+                  Deogyeong-daero, Giheung-gu, Yongin-si, Gyeonggi-do, 17104,
+                  Republic of Korea
+                </p>
+              </div>
             </div>
-          </div>
+            <div class="contact-row">
+              <div class="map-placeholder reveal">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.9644670001095!2d127.0772275763574!3d37.24263624231644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b44df25a102c3%3A0x22dcda61fb710fef!2z6rK97Z2s64yA7ZstandardIOqzteqzvOuMgO2Vmeq0gA!5e0!3m2!1sko!2skr!4v1709280000000!5m2!1sko!2skr"
+                  allowfullscreen=""
+                  loading="lazy"
+                  title="Kyung Hee University Map"
+                >
+                </iframe>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon">✉️</div>
+              <div class="contact-info">
+                <label>Email</label>
+                <p>jayum@khu.ac.kr</p>
+              </div>
+            </div>
 
-          <div class="member-card">
-            <!-- <div class="member-photo-placeholder">👤</div> -->
-            <div class="member-info">
-              <span class="member-badge badge-phd">PhD 3기</span>
-              <p class="member-name">Shokhikha Amalana Murdivien</p>
-              <p class="member-name-ko">아말라나</p>
-              <p class="member-research">amalanadivien@khu.ac.kr</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MS Students -->
-    <section class="member-section" style="padding-top: 1rem" id="ms-section">
-      <div class="container">
-        <span class="section-anchor" id="ms"></span>
-        <div class="section-heading"><h2>MS Students</h2></div>
-        <div class="member-grid">
-          <div class="member-card">
-            <!-- <div class="member-photo-placeholder">👤</div> -->
-            <div class="member-info">
-              <span class="member-badge badge-ms">MS 3기</span>
-              <p class="member-name">Yoonji Chae</p>
-              <p class="member-name-ko">채윤지</p>
-              <p class="member-research">cynj20@khu.ac.kr</p>
-            </div>
-          </div>
-
-          <div class="member-card">
-            <!-- <div class="member-photo-placeholder">👤</div> -->
-            <div class="member-info">
-              <span class="member-badge badge-ms">MS 3기</span>
-              <p class="member-name">Kyungwan Choi</p>
-              <p class="member-name-ko">최경완</p>
-              <p class="member-research">choikyungwan7@khu.ac.kr</p>
-            </div>
-          </div>
-          <div class="member-card">
-            <!-- <div class="member-photo-placeholder">👤</div> -->
-            <div class="member-info">
-              <span class="member-badge badge-ms">MS 3기</span>
-              <p class="member-name">Sena Nur Durgunlu</p>
-              <p class="member-name-ko">세나</p>
-              <p class="member-research">senanurdurgunlu@khu.ac.kr</p>
-            </div>
-          </div>
-          <div class="member-card">
-            <!-- <div class="member-photo-placeholder">👤</div> -->
-            <div class="member-info">
-              <span class="member-badge badge-ms">MS 1기</span>
-              <p class="member-name">Youngwoo An</p>
-              <p class="member-name-ko">안영우</p>
-              <p class="member-research">kamilin12@khu.ac.kr</p>
-            </div>
-          </div>
-          <div class="member-card">
-            <!-- <div class="member-photo-placeholder">👤</div> -->
-            <div class="member-info">
-              <span class="member-badge badge-ms">MS 1기</span>
-              <p class="member-name">Sungjae Cho</p>
-              <p class="member-name-ko">조성재</p>
-              <p class="member-research">whtjdwo9267@khu.ac.kr</p>
-            </div>
-          </div>
-          <div class="member-card">
-            <!-- <div class="member-photo-placeholder">👤</div> -->
-            <div class="member-info">
-              <span class="member-badge badge-ms">MS 1기</span>
-              <p class="member-name">Namhoon Heo</p>
-              <p class="member-name-ko">허남훈</p>
-              <p class="member-research">skagns153@khu.ac.kr</p>
-            </div>
-          </div>
-          <div class="member-card">
-            <!-- <div class="member-photo-placeholder">👤</div> -->
-            <div class="member-info">
-              <span class="member-badge badge-ms">MS 1기</span>
-              <p class="member-name">Yewon Lee</p>
-              <p class="member-name-ko">이예원</p>
-              <p class="member-research">juliazxc@khu.ac.kr</p>
-            </div>
-          </div>
-          <div class="member-card">
-            <!-- <div class="member-photo-placeholder">👤</div> -->
-            <div class="member-info">
-              <span class="member-badge badge-ms">MS 1기</span>
-              <p class="member-name">Juyeon Nam</p>
-              <p class="member-name-ko">남주연</p>
-              <p class="member-research">juyeon.nam@khu.ac.kr</p>
+            <div class="contact-row">
+              <div class="contact-icon">📞</div>
+              <div class="contact-info">
+                <label>Telephone</label>
+                <p>031-201-5443</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ALUMNI -->
-    <section
-      class="alumni-section"
-      id="alumni-section"
-      style="background: var(--gray-50); padding: 3rem 0"
-    >
-      <div class="container">
-        <span class="section-anchor" id="alumni"></span>
-        <div class="section-heading" style="margin-bottom: 2rem">
-          <h2>Alumni</h2>
-        </div>
-
-        <div class="alumni-subsection">
-          <ul class="alumni-list">
-            <li>
-              <span class="alumni-name"
-                >박용근 <span class="alumni-period">2019-2021</span></span
-              >
-              <span class="alumni-desc"> MS, now working @Synopsys </span>
-            </li>
-            <li>
-              <span class="alumni-name"
-                >박태병 <span class="alumni-period">2019-2022</span></span
-              >
-              <span class="alumni-desc"> MS, now working @LG CNS </span>
-            </li>
-            <li>
-              <span class="alumni-name"
-                >박정민 <span class="alumni-period">2020-2022</span></span
-              >
-              <span class="alumni-desc"> MS, now working @현대 MOBIS </span>
-            </li>
-            <li>
-              <span class="alumni-name"
-                >김영득 <span class="alumni-period">2022-2024</span></span
-              >
-              <span class="alumni-desc"> MS, now working @Deetem </span>
-            </li>
-            <li>
-              <span class="alumni-name"
-                >최민호 <span class="alumni-period">2023-2025</span></span
-              >
-              <span class="alumni-desc"> MS, now working @현대자동차 </span>
-            </li>
-            <li>
-              <span class="alumni-name"
-                >김동준 <span class="alumni-period">2023-2025</span></span
-              >
-              <span class="alumni-desc">
-                MS, now working @한국전자기술연구원
-              </span>
-            </li>
-            <li>
-              <span class="alumni-name"
-                >문준혁 <span class="alumni-period">2023-2025</span></span
-              >
-              <span class="alumni-desc"> MS, now working @삼성전자 </span>
-            </li>
-            <li>
-              <span class="alumni-name"
-                >조성우 <span class="alumni-period">2024-2026</span></span
-              >
-              <span class="alumni-desc"> MS </span>
-            </li>
-            <li>
-              <span class="alumni-name"
-                >김민지 <span class="alumni-period">2024-2026</span></span
-              >
-              <span class="alumni-desc"> MS </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
+    <!-- FOOTER -->
     <footer>
-      © 2026 SmartFactoryLab · Kyunghee University · All rights reserved.
+      © 2026 SmartFactoryLab · Kyung Hee University · All rights reserved.
     </footer>
 
-    <script>
-      // Hamburger
-      document.getElementById("hamburger").addEventListener("click", () => {
-        document.getElementById("navLinks").classList.toggle("open");
-      });
-
-      // Sticky nav active highlight on scroll
-      const sections = ["professor", "ms-phd", "ms", "alumni"];
-      const navLinks = document.querySelectorAll(".member-nav-link");
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const id = entry.target.id;
-              navLinks.forEach((l) =>
-                l.classList.toggle(
-                  "active",
-                  l.getAttribute("href") === "#" + id,
-                ),
-              );
-            }
-          });
-        },
-        { rootMargin: "-64px 0px -60% 0px", threshold: 0 },
-      );
-
-      sections.forEach((id) => {
-        const el = document.getElementById(id);
-        if (el) observer.observe(el);
-      });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
